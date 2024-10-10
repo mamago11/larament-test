@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'baselinker' => [
+        'api_key' => env('BASELINKER_API_KEY', ''),
+    ],
+
 ];

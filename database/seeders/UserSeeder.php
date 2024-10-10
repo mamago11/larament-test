@@ -13,6 +13,9 @@ class UserSeeder extends Seeder
             ->create([
                 'email' => 'admin@example.com',
                 'name' => 'Admin',
+                'password' => 'password',
+                'telescope_admin' => true,
+                'filament_admin' => true,
             ]);
     }
 }

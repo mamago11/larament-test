@@ -8,6 +8,7 @@ use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Gate;
 
 class User extends Authenticatable implements FilamentUser
 {
@@ -22,6 +23,7 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
+        'telescope_admin'
     ];
 
     /**
@@ -44,12 +46,20 @@ class User extends Authenticatable implements FilamentUser
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'telescope_admin' => 'boolean',
+            'filament_admin' => 'boolean'
         ];
+    }
+
+    protected function gate():void
+    {
+        Gate::define('viewTelescope', function (User $user) {
+            return $user->telescope_admin;
+        });
     }
 
     public function canAccessPanel(Panel $panel): bool
     {
-        /* TODO: Please implement your own logic here. */
-        return str_ends_with($this->email, '@example.com');
+        return $this->filament_admin;
     }
 }

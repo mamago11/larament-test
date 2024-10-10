@@ -73,6 +73,7 @@ class UserResource extends Resource
                             ->required()
                             ->visible(fn (Get $get): bool => filled($get('password')))
                             ->dehydrated(false),
+                        Forms\Components\Checkbox::make('telescope_admin'),
                     ]),
             ]);
     }

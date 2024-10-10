@@ -14,10 +14,13 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.3",
         "filament/filament": "^3.2",
-        "laravel/framework": "^11.9",
+        "flowframe/laravel-trend": "^0.3.0",
+        "laravel/framework": "^v11.27.2",
+        "laravel/telescope": "^5.2",
         "laravel/tinker": "^2.9",
+        "predis/predis": "v3.0.0-alpha1",
         "timokoerber/laravel-one-time-operations": "^1.4"
     },
     "require-dev": {
