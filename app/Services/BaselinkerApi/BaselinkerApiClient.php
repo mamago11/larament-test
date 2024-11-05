@@ -2,7 +2,6 @@
 
     namespace App\Services\BaselinkerApi;
 
-
     use App\Services\BaselinkerApi\Exceptions\BaselinkerApiException;
     use Illuminate\Http\Client\ConnectionException;
     use Illuminate\Support\Facades\Http;
@@ -10,6 +9,7 @@
     class BaselinkerApiClient
     {
         protected $baseUrl;
+
         protected $apiKey;
 
         public function __construct()
@@ -21,9 +21,6 @@
         /**
          * Send a request to the BaseLinker API.
          *
-         * @param string $method
-         * @param array $parameters
-         * @return array
          * @throws BaseLinkerApiException
          * @throws ConnectionException
          */
@@ -49,10 +46,8 @@
             throw new BaseLinkerApiException('Failed to connect to BaseLinker API.');
         }
 
-
         public function getOrders(array $parameters):array
         {
             return $this->sendRequest('getOrders', $parameters);
         }
-
     }

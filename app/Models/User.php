@@ -24,7 +24,7 @@
             'email',
             'password',
             'telescope_admin',
-            'filament_admin'
+            'filament_admin',
         ];
 
         /**
@@ -53,7 +53,7 @@
                 'email_verified_at' => 'datetime',
                 'password' => 'hashed',
                 'telescope_admin' => 'boolean',
-                'filament_admin' => 'boolean'
+                'filament_admin' => 'boolean',
             ];
         }
 

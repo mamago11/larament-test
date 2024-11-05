@@ -83,7 +83,7 @@
                                     fn($livewire) => $livewire instanceof Pages\EditUser ? $livewire->record->is(
                                         auth()->user()
                                     ) : false
-                                )
+                                ),
                         ]),
                 ]);
         }

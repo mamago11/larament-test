@@ -4,5 +4,4 @@
 
     class BaselinkerApiException extends \Exception
     {
-
     }

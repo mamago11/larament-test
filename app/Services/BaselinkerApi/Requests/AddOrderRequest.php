@@ -5,37 +5,69 @@
     class AddOrderRequest
     {
         public $order_status_id;
+
         public $date_add;
+
         public $user_comments;
+
         public $admin_comments;
+
         public $phone;
+
         public $email;
+
         public $user_login;
+
         public $currency;
+
         public $payment_method;
+
         public $payment_method_cod;
+
         public $paid;
+
         public $delivery_method;
+
         public $delivery_price;
+
         public $delivery_fullname;
+
         public $delivery_company;
+
         public $delivery_address;
+
         public $delivery_city;
+
         public $delivery_state;
+
         public $delivery_postcode;
+
         public $delivery_country_code;
+
         public $invoice_fullname;
+
         public $invoice_company;
+
         public $invoice_nip;
+
         public $invoice_address;
+
         public $invoice_city;
+
         public $invoice_state;
+
         public $invoice_postcode;
+
         public $invoice_country_code;
+
         public $want_invoice;
+
         public $extra_field_1;
+
         public $extra_field_2;
+
         public $custom_extra_fields;
+
         public $products;
 
         public function __construct(array $data)

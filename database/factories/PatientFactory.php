@@ -23,7 +23,7 @@
                 'date_of_birth' => $this->faker->date(),
                 'name' => $this->faker->name(),
                 'owner_id' => Owner::inRandomOrder()->first()->id,
-                'type' => Arr::random(PatientTypeEnum::getValues())
+                'type' => Arr::random(PatientTypeEnum::getValues()),
             ];
         }
     }
