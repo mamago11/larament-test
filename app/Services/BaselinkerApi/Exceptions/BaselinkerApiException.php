@@ -1,7 +1,5 @@
 <?php
 
-    namespace App\Services\BaselinkerApi\Exceptions;
+namespace App\Services\BaselinkerApi\Exceptions;
 
-    class BaselinkerApiException extends \Exception
-    {
-    }
+class BaselinkerApiException extends \Exception {}

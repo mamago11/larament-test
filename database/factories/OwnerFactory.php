@@ -1,25 +1,25 @@
 <?php
 
-    namespace Database\Factories;
+namespace Database\Factories;
 
-    use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Owner>
+ */
+class OwnerFactory extends Factory
+{
     /**
-     * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Owner>
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
      */
-    class OwnerFactory extends Factory
+    public function definition(): array
     {
-        /**
-         * Define the model's default state.
-         *
-         * @return array<string, mixed>
-         */
-        public function definition():array
-        {
-            return [
-                'name' => $this->faker->name(),
-                'email' => $this->faker->unique()->safeEmail(),
-                'phone' => $this->faker->phoneNumber(),
-            ];
-        }
+        return [
+            'name' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'phone' => $this->faker->phoneNumber(),
+        ];
     }
+}
