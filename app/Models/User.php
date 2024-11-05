@@ -23,7 +23,8 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
-        'telescope_admin'
+        'telescope_admin',
+        'filament_admin'
     ];
 
     /**
