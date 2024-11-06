@@ -24,6 +24,12 @@ class AppServiceProvider extends ServiceProvider
      * This way you can keep the code clean and organized.
      */
 
+    public function boot(): void
+    {
+        Model::shouldBeStrict();
+        $this->translatableComponents();
+    }
+
     protected function translatableComponents(): void
     {
         foreach ([Field::class, BaseFilter::class, Placeholder::class, Column::class, Entry::class] as $component) {
@@ -33,12 +39,5 @@ class AppServiceProvider extends ServiceProvider
                 $translatable->translateLabel();
             });
         }
-    }
-
-    public function boot(): void
-    {
-        Model::shouldBeStrict(! app()->isProduction());
-        //Model::unguard();
-        $this->translatableComponents();
     }
 }
